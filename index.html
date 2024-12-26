@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./fonts/fontawesome-free-6.4.2-web/css/all.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+    <!-- ========== HEADER ========== -->
+    <header class="flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full py-7">
+        <nav
+            class="relative w-full flex flex-wrap md:grid md:grid-cols-12 basis-full items-center px-4 md:px-6 md:px-8 mx-auto">
+            <div class="md:col-span-3 flex items-center sm:gap-x-5">
+                <!-- Logo -->
+                <a class="flex-none rounded-xl text-xl inline-block font-semibold focus:outline-none focus:opacity-80"
+                    href="../templates/creative-agency/index.html" aria-label="Preline">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10" viewBox="0 0 256 256">
+                        <path fill="#1877F2"
+                            d="M256 128C256 57.308 198.692 0 128 0C57.308 0 0 57.307 0 128c0 63.888 46.808 116.843 108 126.445V165H75.5v-37H108V99.8c0-32.08 19.11-49.8 48.347-49.8C170.352 50 185 52.5 185 52.5V84h-16.14C152.958 84 148 93.867 148 103.99V128h35.5l-5.675 37H148v89.445c61.192-9.602 108-62.556 108-126.445" />
+                        <path fill="#FFF"
+                            d="m177.825 165l5.675-37H148v-24.01C148 93.866 152.959 84 168.86 84H185V52.5S170.352 50 156.347 50C127.11 50 108 67.72 108 99.8V128H75.5v37H108v89.445A128.959 128.959 0 0 0 128 256a128.9 128.9 0 0 0 20-1.555V165h29.825" />
+                    </svg>
+                </a>
+                <!-- End Logo -->
+                <div class="relative">
+                    <label for="Search" class="sr-only"> Search </label>
+
+                    <input type="text" id="Search" placeholder="Tìm kiếm trên Facebook"
+                        class="w-full rounded-full bg-gray-100 px-8 py-2 py-2.5 pe-10 shadow-sm sm:text-sm outline-none" />
+
+                    <span class="absolute inset-y-0 grid w-10 place-content-center">
+                        <button type="button" class="text-gray-600 hover:text-gray-700">
+                            <span class="sr-only">Search</span>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-4">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                            </svg>
+                        </button>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Button Group -->
+            <div class="flex items-center gap-x-1 md:gap-x-10 ms-auto py-1 md:ps-6 md:order-3 md:col-span-3">
+                <div>
+                    <a class="relative inline-block text-black focus:outline-none before:absolute before:bottom-0.5 before:start-0 before:-z-[1] before:w-full before:h-1 before:bg-lime-400"
+                        href="#" aria-current="page"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                            viewBox="0 0 1024 1024">
+                            <path fill="currentColor"
+                                d="M160 448a32 32 0 0 1-32-32V160.064a32 32 0 0 1 32-32h256a32 32 0 0 1 32 32V416a32 32 0 0 1-32 32H160zm448 0a32 32 0 0 1-32-32V160.064a32 32 0 0 1 32-32h255.936a32 32 0 0 1 32 32V416a32 32 0 0 1-32 32H608zM160 896a32 32 0 0 1-32-32V608a32 32 0 0 1 32-32h256a32 32 0 0 1 32 32v256a32 32 0 0 1-32 32H160zm448 0a32 32 0 0 1-32-32V608a32 32 0 0 1 32-32h255.936a32 32 0 0 1 32 32v256a32 32 0 0 1-32 32H608z" />
+                        </svg>
+                    </a>
+                </div>
+                <div>
+                    <a class="inline-block text-black hover:text-gray-600 focus:outline-none focus:text-gray-600  dark:hover:text-neutral-300 dark:focus:text-neutral-300"
+                        href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
+                            <g id="feMessanger0" fill="none" fill-rule="evenodd" stroke="none" stroke-width="1">
+                                <g id="feMessanger1" fill="currentColor">
+                                    <path id="feMessanger2"
+                                        d="m12.942 14.413l-2.56-2.66L5.45 14.48l5.406-5.736l2.56 2.66l4.93-2.727l-5.405 5.736ZM11.899 2C6.432 2 2 6.144 2 11.257c0 2.908 1.434 5.503 3.678 7.2V22l3.378-1.874c.9.252 1.855.388 2.843.388c5.468 0 9.9-4.145 9.9-9.257c0-5.113-4.432-9.257-9.9-9.257Z" />
+                                </g>
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+                <div>
+                    <a class="inline-block text-black hover:text-gray-600 focus:outline-none focus:text-gray-600  dark:hover:text-neutral-300 dark:focus:text-neutral-300"
+                        href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M21 19v1H3v-1l2-2v-6c0-3.1 2.03-5.83 5-6.71V4a2 2 0 0 1 2-2a2 2 0 0 1 2 2v.29c2.97.88 5 3.61 5 6.71v6l2 2m-7 2a2 2 0 0 1-2 2a2 2 0 0 1-2-2m9.75-17.81l-1.42 1.42A8.982 8.982 0 0 1 21 11h2c0-2.93-1.16-5.75-3.25-7.81M1 11h2c0-2.4.96-4.7 2.67-6.39L4.25 3.19A10.96 10.96 0 0 0 1 11Z" />
+                        </svg>
+                    </a>
+                </div>
+                <div>
+                    <a class="inline-block text-black hover:text-gray-600 focus:outline-none focus:text-gray-600  dark:hover:text-neutral-300 dark:focus:text-neutral-300"
+                        href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28" height="28" width="28">
+                            <path fill="currentColor"
+                                d="M14 2C7.373 2 2 7.373 2 14s5.373 12 12 12s12-5.373 12-12S20.627 2 14 2Zm0 19.5c-3.314 0-6-2.143-6-5.357C8 14.959 8.96 14 10.143 14h7.714c1.184 0 2.143.96 2.143 2.143c0 3.214-2.686 5.357-6 5.357Zm0-9A3.25 3.25 0 1 1 14 6a3.25 3.25 0 0 1 0 6.5Z" />
+                        </svg>
+                    </a>
+                </div>
+
+
+            </div>
+            <!-- End Button Group -->
+
+            <!-- Collapse -->
+            <div id="hs-navbar-hcail"
+                class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow md:block md:w-auto md:basis-auto md:order-2 md:col-span-6"
+                aria-labelledby="hs-navbar-hcail-collapse">
+                <div
+                    class="flex flex-col gap-y-4 gap-x-0 mt-5 md:flex-row md:justify-center md:items-center md:gap-y-0 md:gap-x-10 md:mt-0">
+                    <div>
+                        <a class="relative inline-block text-black focus:outline-none before:absolute before:bottom-0.5 before:start-0 before:-z-[1] before:w-full before:h-1 before:bg-lime-400"
+                            href="#" aria-current="page"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                viewBox="0 0 16 16">
+                                <path fill="#65686C" fill-rule="evenodd"
+                                    d="m8.36 1.37l6.36 5.8l-.71.71L13 6.964v6.526l-.5.5h-3l-.5-.5v-3.5H7v3.5l-.5.5h-3l-.5-.5V6.972L2 7.88l-.71-.71l6.35-5.8h.72zM4 6.063v6.927h2v-3.5l.5-.5h3l.5.5v3.5h2V6.057L8 2.43L4 6.063z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div>
+                        <a class="inline-block text-black hover:text-gray-600 focus:outline-none focus:text-gray-600  dark:hover:text-neutral-300 dark:focus:text-neutral-300"
+                            href="#"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+                                <path fill="#65686C"
+                                    d="M5.5 7a3 3 0 1 1 6 0a3 3 0 0 1-6 0Zm3-5a5 5 0 1 0 0 10a5 5 0 0 0 0-10Zm7 0h-1v2h1a3 3 0 1 1 0 6h-1v2h1a5 5 0 0 0 0-10ZM0 19a5 5 0 0 1 5-5h7a5 5 0 0 1 5 5v2h-2v-2a3 3 0 0 0-3-3H5a3 3 0 0 0-3 3v2H0v-2Zm24 0a5 5 0 0 0-5-5h-1v2h1a3 3 0 0 1 3 3v2h2v-2Z" />
+                            </svg></a>
+                    </div>
+                    <div>
+                        <a class="inline-block text-black hover:text-gray-600 focus:outline-none focus:text-gray-600  dark:hover:text-neutral-300 dark:focus:text-neutral-300"
+                            href="#"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                viewBox="0 0 256 256">
+                                <path fill="#65686C"
+                                    d="m164.44 105.34l-48-32A8 8 0 0 0 104 80v64a8 8 0 0 0 12.44 6.66l48-32a8 8 0 0 0 0-13.32ZM120 129.05V95l25.58 17ZM216 40H40a16 16 0 0 0-16 16v112a16 16 0 0 0 16 16h176a16 16 0 0 0 16-16V56a16 16 0 0 0-16-16Zm0 128H40V56h176v112Zm16 40a8 8 0 0 1-8 8H32a8 8 0 0 1 0-16h192a8 8 0 0 1 8 8Z" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div>
+                        <a class="inline-block text-black hover:text-gray-600 focus:outline-none focus:text-gray-600  dark:hover:text-neutral-300 dark:focus:text-neutral-300"
+                            href="#"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 48 48">
+                                <g fill="#65686C">
+                                    <path fill-rule="evenodd"
+                                        d="M9.263 6c-.378 0-.715.262-.845.656L6.11 13.667a2.2 2.2 0 0 0-.11.687v2.789C6 18.72 7.151 20 8.571 20c1.42 0 2.572-1.28 2.572-2.857c0 1.578 1.151 2.857 2.571 2.857c1.42 0 2.572-1.28 2.572-2.857c0 1.578 1.151 2.857 2.571 2.857c1.42 0 2.57-1.278 2.572-2.855C21.429 18.722 22.58 20 24 20c1.42 0 2.571-1.28 2.571-2.857c0 1.578 1.152 2.857 2.572 2.857c1.42 0 2.57-1.278 2.571-2.855c.001 1.577 1.152 2.855 2.572 2.855c1.42 0 2.571-1.28 2.571-2.857c0 1.578 1.151 2.857 2.572 2.857C40.849 20 42 18.72 42 17.143v-2.789a2.2 2.2 0 0 0-.11-.687l-2.308-7.01c-.13-.395-.467-.657-.845-.657H9.263Z"
+                                        clip-rule="evenodd" />
+                                    <path fill-rule="evenodd"
+                                        d="M10 21.23V29H7.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h33a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5H38v-7.77a3.916 3.916 0 0 1-1.143-.703a3.953 3.953 0 0 1-.857.576V29H12v-7.897a3.953 3.953 0 0 1-.857-.576c-.336.295-.72.535-1.143.703Zm26-1.957c.085-.085.165-.176.24-.273H36v.273ZM37.474 19a2.75 2.75 0 0 0 .526.519V19h-.526ZM10 19.519a2.63 2.63 0 0 0 .526-.519H10v.519ZM11.76 19H12v.273a2.766 2.766 0 0 1-.24-.273ZM8.5 33a.5.5 0 0 0-.5.5V41a1 1 0 0 0 1 1h30a1 1 0 0 0 1-1v-7.5a.5.5 0 0 0-.5-.5h-31Z"
+                                        clip-rule="evenodd" />
+                                    <path
+                                        d="M14 26.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-2Z" />
+                                    <path
+                                        d="M16 27.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1Zm8 0a1.5 1.5 0 1 1-3 0a1.5 1.5 0 0 1 3 0Z" />
+                                </g>
+                            </svg></a>
+                    </div>
+                    <div>
+                        <a class="inline-block text-black hover:text-gray-600 focus:outline-none focus:text-gray-600  dark:hover:text-neutral-300 dark:focus:text-neutral-300"
+                            href="#"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 16 16">
+                                <path fill="#65686C"
+                                    d="M3.505 7.5a.5.5 0 0 1 .5-.5h1V6a.5.5 0 0 1 1 0v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 1 1-1 0V8h-1a.5.5 0 0 1-.5-.5ZM11 9a1 1 0 1 1-2 0a1 1 0 0 1 2 0Zm0-2a1 1 0 1 0 0-2a1 1 0 0 0 0 2Zm-9.999.5a4.5 4.5 0 0 1 4.5-4.5h5.008a4.5 4.5 0 1 1 0 9H5.501a4.5 4.5 0 0 1-4.5-4.5Zm4.5-3.5a3.5 3.5 0 1 0 0 7h5.008a3.5 3.5 0 1 0 0-7H5.501Z" />
+                            </svg></a>
+                    </div>
+                </div>
+            </div>
+            <!-- End Collapse -->
+        </nav>
+    </header>
+    <!-- ========== END HEADER ========== -->
+
+
+
+    <!-- ======== MIDDILE ======== -->
+    <div class="grid grid-cols-1 gap-4 lg:grid-cols-4 lg:gap-8">
+
+        <!-- Sidebar-left -->
+        <div class="h-32 rounded-lg bg-gray-200">
+            <div class="flex h-screen flex-col justify-between border-e bg-white">
+                <div class="px-4 py-2">
+                    <ul class="mt-6 space-y-1">
+                        <li>
+                            <a href="#"
+                                class="flex items-center sm:gap-x-5 rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28" height="28" width="28">
+                                    <path fill="currentColor"
+                                        d="M14 2C7.373 2 2 7.373 2 14s5.373 12 12 12s12-5.373 12-12S20.627 2 14 2Zm0 19.5c-3.314 0-6-2.143-6-5.357C8 14.959 8.96 14 10.143 14h7.714c1.184 0 2.143.96 2.143 2.143c0 3.214-2.686 5.357-6 5.357Zm0-9A3.25 3.25 0 1 1 14 6a3.25 3.25 0 0 1 0 6.5Z" />
+                                </svg> Phạm Tùng
+                            </a>
+                        </li>
+
+
+
+                        <li>
+                            <a href="#"
+                                class="flex items-center sm:gap-x-5 rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 819 622" height="28" width="28">
+                                    <path fill="currentColor"
+                                        d="M552.664 491c41 23 64 61 60 100c-2 24-1 24-32 28c-19 2-140 3-263 3c-140 0-286-1-297-4c-41-11-17-87 37-123c43-27 130-69 154-74c33-7 37-28 0-91c-8-15-17-58-18-104c-1-74 12-124 77-149c12-4 26-6 39-6c43 0 83 24 100 59c23 47 12 170-12 215c-29 51-26 67 6 75c20 5 86 36 149 71zm219-63c32 17 50 48 47 78c-1 18-1 19-25 22c-12 2-75 3-149 3c-13-31-38-59-72-77c-39-22-85-45-120-60c23-11 43-20 52-22c25-6 28-20 0-70c-7-12-15-46-16-82c-1-58 12-98 62-117c10-3 21-5 31-5c33 0 64 18 77 46c17 37 9 133-9 169c-22 40-20 52 5 58c16 4 67 29 117 57z" />
+                                </svg> Bạn bè
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#"
+                                class="flex items-center sm:gap-x-5 rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="28" width="28" viewBox="0 0 819 638">
+                                    <path fill="currentColor"
+                                        d="M669.775 499c42 23 66 64 63 105c-2 25-3 26-35 30c-20 3-146 4-276 4c-147 0-301-3-312-6c-44-11-20-91 38-129c45-29 137-73 162-78c34-7 38-28 0-96c-9-15-19-61-20-109c-1-78 14-131 82-157c14-5 28-7 41-7c45 0 87 25 104 62c25 49 15 180-11 227c-30 53-27 70 6 79c22 6 90 38 158 75zm-544-30c-16 11-31 25-43 39c-38 0-67-1-70-2c-25-6-11-52 22-72c25-16 76-41 90-44c18-4 22-15 0-53c-5-8-11-34-11-61c-1-44 8-74 46-87c32-12 68 3 81 30c13 28 6 100-8 126c-16 31-13 39 5 44c4 1 12 5 23 10c-44 18-104 51-135 70zm658-38c24 13 37 35 35 58c-1 14-1 15-19 17c-5 1-28 2-58 2c-13-17-31-33-53-44c-41-24-91-50-128-66c10-4 19-7 23-8c19-4 22-15 0-53c-4-8-11-34-11-61c-1-44 7-74 45-87c33-12 69 3 81 30c13 28 8 100-6 126c-16 31-14 39 3 44c12 4 50 22 88 42z" />
+                                </svg>Nhóm
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#"
+                                class="flex items-center sm:gap-x-5 rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="28" width="28" viewBox="0 0 384 512">
+                                    <path fill="currentColor"
+                                        d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400L0 512z" />
+                                </svg>Đã lưu
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#"
+                                class="flex items-center sm:gap-x-5 rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 256 256">
+                                    <path fill="currentColor"
+                                        d="M140 80v41.21l34.17 20.5a12 12 0 1 1-12.34 20.58l-40-24A12 12 0 0 1 116 128V80a12 12 0 0 1 24 0Zm-12-52a99.38 99.38 0 0 0-70.76 29.34c-4.69 4.74-9 9.37-13.24 14V64a12 12 0 0 0-24 0v40a12 12 0 0 0 12 12h40a12 12 0 0 0 0-24H57.77c5.23-6 10.6-11.78 16.49-17.74a76 76 0 1 1 1.58 109a12 12 0 0 0-16.48 17.46A100 100 0 1 0 128 28Z" />
+                                </svg>Kỷ niệm
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#"
+                                class="flex items-center sm:gap-x-5 rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 256 256">
+                                    <path fill="currentColor"
+                                        d="m164.44 105.34l-48-32A8 8 0 0 0 104 80v64a8 8 0 0 0 12.44 6.66l48-32a8 8 0 0 0 0-13.32ZM120 129.05V95l25.58 17ZM216 40H40a16 16 0 0 0-16 16v112a16 16 0 0 0 16 16h176a16 16 0 0 0 16-16V56a16 16 0 0 0-16-16Zm0 128H40V56h176v112Zm16 40a8 8 0 0 1-8 8H32a8 8 0 0 1 0-16h192a8 8 0 0 1 8 8Z" />
+                                </svg>Video
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#"
+                                class="flex items-center sm:gap-x-5 rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 48 48">
+                                    <g fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M9.263 6c-.378 0-.715.262-.845.656L6.11 13.667a2.2 2.2 0 0 0-.11.687v2.789C6 18.72 7.151 20 8.571 20c1.42 0 2.572-1.28 2.572-2.857c0 1.578 1.151 2.857 2.571 2.857c1.42 0 2.572-1.28 2.572-2.857c0 1.578 1.151 2.857 2.571 2.857c1.42 0 2.57-1.278 2.572-2.855C21.429 18.722 22.58 20 24 20c1.42 0 2.571-1.28 2.571-2.857c0 1.578 1.152 2.857 2.572 2.857c1.42 0 2.57-1.278 2.571-2.855c.001 1.577 1.152 2.855 2.572 2.855c1.42 0 2.571-1.28 2.571-2.857c0 1.578 1.151 2.857 2.572 2.857C40.849 20 42 18.72 42 17.143v-2.789a2.2 2.2 0 0 0-.11-.687l-2.308-7.01c-.13-.395-.467-.657-.845-.657H9.263Z"
+                                            clip-rule="evenodd" />
+                                        <path fill-rule="evenodd"
+                                            d="M10 21.23V29H7.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h33a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5H38v-7.77a3.916 3.916 0 0 1-1.143-.703a3.953 3.953 0 0 1-.857.576V29H12v-7.897a3.953 3.953 0 0 1-.857-.576c-.336.295-.72.535-1.143.703Zm26-1.957c.085-.085.165-.176.24-.273H36v.273ZM37.474 19a2.75 2.75 0 0 0 .526.519V19h-.526ZM10 19.519a2.63 2.63 0 0 0 .526-.519H10v.519ZM11.76 19H12v.273a2.766 2.766 0 0 1-.24-.273ZM8.5 33a.5.5 0 0 0-.5.5V41a1 1 0 0 0 1 1h30a1 1 0 0 0 1-1v-7.5a.5.5 0 0 0-.5-.5h-31Z"
+                                            clip-rule="evenodd" />
+                                        <path
+                                            d="M14 26.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-2Z" />
+                                        <path
+                                            d="M16 27.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1Zm8 0a1.5 1.5 0 1 1-3 0a1.5 1.5 0 0 1 3 0Z" />
+                                    </g>
+                                </svg>Marketplace
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#"
+                                class="flex items-center sm:gap-x-5 rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 20 20">
+                                    <path fill="currentColor"
+                                        d="M2 2h16c.55 0 1 .45 1 1v14c0 .55-.45 1-1 1H2c-.55 0-1-.45-1-1V3c0-.55.45-1 1-1zm15 14V7H3v9h14zM4 8v1h3V8H4zm4 0v3h8V8H8zm-4 4v1h3v-1H4zm4 0v3h8v-3H8z" />
+                                </svg>Bảng feed
+                            </a>
+                        </li>
+
+                        <li>
+                            <details class="group [&_summary::-webkit-details-marker]:hidden">
+                                <summary
+                                    class="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                                    <span class="flex items-center sm:gap-x-5 text-sm font-medium">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                            viewBox="0 0 48 48">
+                                            <g fill="none" stroke="currentColor" stroke-linejoin="round"
+                                                stroke-width="4">
+                                                <path
+                                                    d="M24 44c11.046 0 20-8.954 20-20S35.046 4 24 4S4 12.954 4 24s8.954 20 20 20Z" />
+                                                <path stroke-linecap="round" d="m33 21l-9 9l-9-9" />
+                                            </g>
+                                        </svg>Xem thêm
+                                    </span>
+
+
+                                </summary>
+
+                                <ul class="mt-2 space-y-1 px-4">
+                                    <li>
+                                        <a href="#"
+                                            class="flex items-center sm:gap-x-5 rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                                viewBox="0 0 15 15">
+                                                <path fill="currentColor"
+                                                    d="M13.91 7.75c-1.17 2.25-4.3 5.31-6.07 6.94a.5.5 0 0 1-.67 0C5.39 13.06 2.26 10 1.09 7.75C-1.48 2.8 5-.5 7.5 4.45C10-.5 16.48 2.8 13.91 7.75z" />
+                                            </svg>Chiến dịch gây quỹ
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#"
+                                            class="flex items-center sm:gap-x-5 rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                                viewBox="0 0 16 16">
+                                                <path fill="#65686C"
+                                                    d="M3.505 7.5a.5.5 0 0 1 .5-.5h1V6a.5.5 0 0 1 1 0v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 1 1-1 0V8h-1a.5.5 0 0 1-.5-.5ZM11 9a1 1 0 1 1-2 0a1 1 0 0 1 2 0Zm0-2a1 1 0 1 0 0-2a1 1 0 0 0 0 2Zm-9.999.5a4.5 4.5 0 0 1 4.5-4.5h5.008a4.5 4.5 0 1 1 0 9H5.501a4.5 4.5 0 0 1-4.5-4.5Zm4.5-3.5a3.5 3.5 0 1 0 0 7h5.008a3.5 3.5 0 1 0 0-7H5.501Z" />
+                                            </svg>Chơi game
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#"
+                                            class="flex items-center sm:gap-x-5 rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                                viewBox="0 0 512 512">
+                                                <path fill="currentColor"
+                                                    d="M64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V192c0-35.3-28.7-64-64-64H80c-8.8 0-16-7.2-16-16s7.2-16 16-16h368c17.7 0 32-14.3 32-32s-14.3-32-32-32H64zm352 240a32 32 0 1 1 0 64a32 32 0 1 1 0-64z" />
+                                            </svg>Đơn đặt hàng và thanh toán
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#"
+                                            class="flex items-center sm:gap-x-5 rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                                viewBox="0 0 1360 1000">
+                                                <path fill="currentColor"
+                                                    d="M1360 1v1000H0V1h1360zM120 881h1120V121H120v760zm1000-560q0 33-23.5 56.5T1040 401t-56.5-23.5T960 321t23.5-56.5T1040 241t56.5 23.5T1120 321zm43 473q2 1 1 4t-4 3H204q-4 0-4-4v-2q18-36 135-280t144-299q1-2 3.5-2.5t3.5 1.5l311 386l152-122h7l1 2q39 50 101.5 155T1163 794z" />
+                                            </svg>Hoạt động gần đây với quảng cáo
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#"
+                                            class="flex items-center sm:gap-x-5 rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                                viewBox="0 0 16 16">
+                                                <path fill="currentColor"
+                                                    d="M0 7.76C0 3.301 3.493 0 8 0s8 3.301 8 7.76s-3.493 7.76-8 7.76c-.81 0-1.586-.107-2.316-.307a.639.639 0 0 0-.427.03l-1.588.702a.64.64 0 0 1-.898-.566l-.044-1.423a.639.639 0 0 0-.215-.456C.956 12.108 0 10.092 0 7.76zm5.546-1.459l-2.35 3.728c-.225.358.214.761.551.506l2.525-1.916a.48.48 0 0 1 .578-.002l1.869 1.402a1.2 1.2 0 0 0 1.735-.32l2.35-3.728c.226-.358-.214-.761-.551-.506L9.728 7.381a.48.48 0 0 1-.578.002L7.281 5.98a1.2 1.2 0 0 0-1.735.32z" />
+                                            </svg>Messenger
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#"
+                                            class="flex items-center sm:gap-x-5 rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                                viewBox="0 0 24 24">
+                                                <g id="feMessanger0" fill="none" fill-rule="evenodd" stroke="none"
+                                                    stroke-width="1">
+                                                    <g id="feMessanger1" fill="currentColor">
+                                                        <path id="feMessanger2"
+                                                            d="m12.942 14.413l-2.56-2.66L5.45 14.48l5.406-5.736l2.56 2.66l4.93-2.727l-5.405 5.736ZM11.899 2C6.432 2 2 6.144 2 11.257c0 2.908 1.434 5.503 3.678 7.2V22l3.378-1.874c.9.252 1.855.388 2.843.388c5.468 0 9.9-4.145 9.9-9.257c0-5.113-4.432-9.257-9.9-9.257Z" />
+                                                    </g>
+                                                </g>
+                                            </svg>Messenger kids
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#"
+                                            class="flex items-center sm:gap-x-5 rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                                viewBox="0 0 48 48">
+                                                <g fill="none" stroke="currentColor" stroke-linejoin="round"
+                                                    stroke-width="4">
+                                                    <path
+                                                        d="M4 10a2 2 0 0 1 2-2h36a2 2 0 0 1 2 2v28a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V10Z" />
+                                                    <path stroke-linecap="round"
+                                                        d="M36 8v32M12 8v32m26-22h6m-6 12h6M4 18h6m-6-2v4M9 8h6M9 40h6M33 8h6m-6 32h6M4 30h6m-6-2v4m40-4v4m0-16v4" />
+                                                    <path d="m21 19l8 5l-8 5V19Z" />
+                                                </g>
+                                            </svg>Reels
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#"
+                                            class="flex items-center sm:gap-x-5 rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                                viewBox="0 0 24 24">
+                                                <path fill="currentColor"
+                                                    d="M5 12H4v8a2 2 0 0 0 2 2h5V12H5zm13 0h-5v10h5a2 2 0 0 0 2-2v-8h-2zm.791-5A4.92 4.92 0 0 0 19 5.5C19 3.57 17.43 2 15.5 2c-1.622 0-2.705 1.482-3.404 3.085C11.407 3.57 10.269 2 8.5 2C6.57 2 5 3.57 5 5.5c0 .596.079 1.089.209 1.5H2v4h9V9h2v2h9V7h-3.209zM7 5.5C7 4.673 7.673 4 8.5 4c.888 0 1.714 1.525 2.198 3H8c-.374 0-1 0-1-1.5zM15.5 4c.827 0 1.5.673 1.5 1.5C17 7 16.374 7 16 7h-2.477c.51-1.576 1.251-3 1.977-3z" />
+                                            </svg>Sinh nhật
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#"
+                                            class="flex items-center sm:gap-x-5 rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                                viewBox="0 0 26 26">
+                                                <path fill="currentColor"
+                                                    d="M7 0c-.551 0-1 .449-1 1v3c0 .551.449 1 1 1c.551 0 1-.449 1-1V1c0-.551-.449-1-1-1zm12 0c-.551 0-1 .449-1 1v3c0 .551.449 1 1 1c.551 0 1-.449 1-1V1c0-.551-.449-1-1-1zM3 2C1.344 2 0 3.344 0 5v18c0 1.656 1.344 3 3 3h20c1.656 0 3-1.344 3-3V5c0-1.656-1.344-3-3-3h-2v2a2 2 0 0 1-4 0V2H9v2a2 2 0 0 1-4 0V2H3zM2 9h22v14c0 .551-.449 1-1 1H3c-.551 0-1-.449-1-1V9zm7 3v2.313h4.813l-3.782 7.656H13.5l3.469-8.438V12H9z" />
+                                            </svg>Sự kiện
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#"
+                                            class="flex items-center sm:gap-x-5 rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                                viewBox="0 0 320 384">
+                                                <path fill="currentColor"
+                                                    d="M201 64h119v213H171l-9-42H43v149H0V21h192z" />
+                                            </svg>Trang
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#"
+                                            class="flex items-center sm:gap-x-5 rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                                viewBox="0 0 256 256">
+                                                <g id="galaChart0" fill="none" stroke="currentColor"
+                                                    stroke-dasharray="none" stroke-linecap="round"
+                                                    stroke-linejoin="round" stroke-miterlimit="4" stroke-opacity="1"
+                                                    stroke-width="16">
+                                                    <rect id="galaChart1" width="224" height="224" x="16" y="16"
+                                                        ry="32" />
+                                                    <path id="galaChart2" d="M 160.00003,192.00003 V 111.99998" />
+                                                    <path id="galaChart3" d="M 192.00002,192.00003 V 63.999974" />
+                                                    <path id="galaChart4" d="m 63.999979,192.00003 v -32" />
+                                                    <path id="galaChart5" d="m 95.99997,128 v 64.00003" />
+                                                    <path id="galaChart6" d="m 128,144 v 48.00003" />
+                                                </g>
+                                            </svg>Trình quản lý quảng cáo
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#"
+                                            class="flex items-center sm:gap-x-5 rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                                viewBox="0 0 48 48">
+                                                <path fill="currentColor"
+                                                    d="M21.503 40a1.5 1.5 0 1 1 0 3a1.5 1.5 0 0 1 0-3Zm9 0a1.5 1.5 0 1 1 0 3a1.5 1.5 0 0 1 0-3Zm-13.5-2a1.5 1.5 0 1 1 0 3a1.5 1.5 0 0 1 0-3Zm9 0a1.5 1.5 0 1 1 0 3a1.5 1.5 0 0 1 0-3Zm9 0a1.5 1.5 0 1 1 0 3a1.5 1.5 0 0 1 0-3ZM26 12.01c6.337 0 9.932 4.194 10.455 9.26h.16c4.078 0 7.384 3.297 7.384 7.364c0 4.068-3.306 7.365-7.385 7.365H15.386c-4.078 0-7.384-3.297-7.384-7.365c0-4.067 3.306-7.365 7.384-7.365h.16c.526-5.099 4.118-9.26 10.455-9.26ZM7.569 20.19a1.75 1.75 0 0 1-.499 2.3l-.142.09l-1.299.75a1.75 1.75 0 0 1-1.892-2.94l.142-.09l1.3-.75a1.75 1.75 0 0 1 2.39.64Zm14.14-9.528c-3.801 1.22-6.509 4.09-7.62 7.921l-.094.341l-.116.476l-.412.077a9.278 9.278 0 0 0-3.341 1.43A7.883 7.883 0 0 1 21.71 10.662ZM5.505 9.978l.132.056l1.36.634a1.75 1.75 0 0 1-1.347 3.227l-.132-.055l-1.36-.634a1.75 1.75 0 0 1 1.347-3.228Zm19.11-5.762a1.75 1.75 0 0 1 .508 2.317l-.078.12l-.86 1.23a1.75 1.75 0 0 1-2.945-1.887l.078-.121l.86-1.229a1.75 1.75 0 0 1 2.438-.43Zm-10.291-.419l.065.156l.513 1.41a1.75 1.75 0 0 1-3.224 1.352l-.065-.156l-.513-1.41a1.75 1.75 0 0 1 3.224-1.352Z" />
+                                            </svg>Trung tâm khoa học khí hậu
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#"
+                                            class="flex items-center sm:gap-x-5 rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+                                                viewBox="0 0 64 64">
+                                                <path fill="currentColor"
+                                                    d="m61.876 44.196l-4.394-22.105c-.966-5.144-5.386-9.037-10.714-9.087V13H17.337c-5.375-.002-9.853 3.914-10.825 9.093L2.125 44.196c-.082.39-.13.79-.125 1.205C1.995 48.493 4.461 51 7.504 51c1.962 0 3.683-1.039 4.661-2.607l7.24-9.039a6.422 6.422 0 0 0 4.418 1.765c3.578-.002 6.479-2.949 6.479-6.591l3.5-.001c0 3.639 2.904 6.59 6.482 6.59a6.418 6.418 0 0 0 4.355-1.704l7.195 8.98c.977 1.564 2.7 2.607 4.657 2.607c3.043 0 5.512-2.507 5.509-5.601a5.796 5.796 0 0 0-.124-1.203m-40.955-23.01c.703-.716 1.506-.507 1.789.465l-.004 3.126c-.279.973-1.082 1.183-1.783.468l-.719-.73a1.866 1.866 0 0 1 0-2.6l.717-.729m-5.117-3.427l3.072-.003c.955.282 1.16 1.102.455 1.817l-.712.728a1.794 1.794 0 0 1-2.56 0l-.718-.729c-.704-.715-.499-1.534.463-1.813m-2.047 7.483c-.705.718-1.511.508-1.79-.465l.004-3.126c.275-.973 1.081-1.182 1.784-.466l.716.729a1.864 1.864 0 0 1 0 2.6l-.714.728m5.119 3.429l-3.076.003c-.958-.286-1.163-1.101-.458-1.817l.718-.729a1.795 1.795 0 0 1 2.559-.001l.715.73c.702.716.495 1.531-.458 1.814m4.942 10.268c-2.396.002-4.343-1.973-4.343-4.413c0-2.438 1.947-4.416 4.348-4.416c2.395.003 4.339 1.978 4.339 4.415c.003 2.442-1.944 4.418-4.344 4.414m20.263-19.406c.996.002 1.805.825 1.805 1.839c.002 1.019-.807 1.844-1.809 1.839c-1 .003-1.809-.82-1.809-1.837c.001-1.016.809-1.839 1.813-1.841m-3.797 19.408c-2.396 0-4.34-1.977-4.342-4.415c.002-2.438 1.945-4.416 4.342-4.416c2.401.002 4.346 1.978 4.344 4.416c0 2.438-1.942 4.413-4.344 4.415m3.963-10.208c-1 0-1.81-.826-1.81-1.841c-.001-1.017.81-1.841 1.81-1.841s1.808.824 1.811 1.841c0 1.016-.813 1.841-1.811 1.841m5.045-11.037c.999-.001 1.809.822 1.811 1.839c-.002 1.014-.812 1.839-1.811 1.839c-1 0-1.809-.825-1.809-1.839c-.002-1.018.805-1.843 1.809-1.839m.168 9.197c-.998.001-1.808-.822-1.805-1.838c-.003-1.017.807-1.842 1.807-1.839c.998-.002 1.81.82 1.81 1.836c-.001 1.018-.812 1.842-1.812 1.841" />
+                                            </svg>Video chơi game
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </details>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </div>
+        </div>
+        <!-- End Sidebar-left -->
+
+
+        <!-- Content -->
+        <div class="h-32 rounded-lg bg-gray-200 lg:col-span-2">
+            <div class="bg-gray-100 p-4">
+                <!-- Input Status -->
+                <div class="bg-white p-3 rounded-lg shadow-md">
+                    <div class="flex items-center space-x-4 border-b pb-4 p-2 px-12">
+                        <a class="inline-block text-black hover:text-gray-600 focus:outline-none focus:text-gray-600  dark:hover:text-neutral-300 dark:focus:text-neutral-300"
+                            href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28" height="28" width="28">
+                                <path fill="currentColor"
+                                    d="M14 2C7.373 2 2 7.373 2 14s5.373 12 12 12s12-5.373 12-12S20.627 2 14 2Zm0 19.5c-3.314 0-6-2.143-6-5.357C8 14.959 8.96 14 10.143 14h7.714c1.184 0 2.143.96 2.143 2.143c0 3.214-2.686 5.357-6 5.357Zm0-9A3.25 3.25 0 1 1 14 6a3.25 3.25 0 0 1 0 6.5Z" />
+                            </svg>
+                        </a>
+                        <input type="text" placeholder="Bạn đang nghĩ gì thế?"
+                            class="flex-1 bg-gray-100 rounded-full px-4 py-2 text-sm focus:outline-none" />
+
+                    </div>
+
+                    <!-- Actions -->
+                    <div class="flex justify-around bg-white p-2">
+                        <button
+                            class="flex items-center space-x-2 text-gray-600 hover:bg-gray-100 px-4 py-2 rounded-md">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 20 20">
+                                <path fill="currentColor"
+                                    d="M14 5.5A2.5 2.5 0 0 0 11.5 3h-6A2.5 2.5 0 0 0 3 5.5v3.1a5.5 5.5 0 0 1 7.793 6.4h.707a2.5 2.5 0 0 0 2.5-2.5v-7Zm1 1.43v4.152l2.764 2.35A.75.75 0 0 0 19 12.86V5.193a.75.75 0 0 0-1.23-.575L15 6.93Zm-5 6.57a4.5 4.5 0 1 1-9 0a4.5 4.5 0 0 1 9 0Zm-4-2a.5.5 0 0 0-1 0V13H3.5a.5.5 0 0 0 0 1H5v1.5a.5.5 0 0 0 1 0V14h1.5a.5.5 0 0 0 0-1H6v-1.5Z" />
+                            </svg>
+                            <span>Video trực tiếp</span>
+                        </button>
+                        <button
+                            class="flex items-center space-x-2 text-gray-600 hover:bg-gray-100 px-4 py-2 rounded-md">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 48 48">
+                                <g fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="4">
+                                    <rect width="30" height="30" x="6" y="6" rx="2" />
+                                    <path stroke-linecap="round"
+                                        d="M42 12v27a3 3 0 0 1-3 3H12M6 25l7.656-6.806a2 2 0 0 1 2.674.015L26 27" />
+                                    <path stroke-linecap="round"
+                                        d="m22 23l4.785-3.988a2 2 0 0 1 2.48-.063L36 24M6 19v8m30-8v8" />
+                                </g>
+                            </svg>
+                            <span>Ảnh/video</span>
+                        </button>
+                        <button
+                            class="flex items-center space-x-2 text-gray-600 hover:bg-gray-100 px-4 py-2 rounded-md">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 14 14">
+                                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M7 13.5a6.5 6.5 0 1 0 0-13a6.5 6.5 0 0 0 0 13" />
+                                    <path
+                                        d="M9 10.464a3.5 3.5 0 0 0 1.281-4.78l-6.062 3.5A3.5 3.5 0 0 0 9 10.463Zm-.902-7.562L7.55 4.95l1.732-1m-6.38 1.952l2.049.549l-1.732 1" />
+                                </g>
+                            </svg>
+                            <span>Cảm xúc/hoạt động</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Stories Section -->
+                <div class="mt-3 flex space-x-3 overflow-x-auto">
+                    <!-- Create Story -->
+                    <div
+                        class="flex flex-col items-center justify-center w-28 h-55 bg-gray-200 rounded-lg text-center shadow-md">
+                        <div class="w-16 h-16 bg-gray-400 rounded-full"></div>
+                        <span class="mt-2 text-sm font-semibold">Tạo tin</span>
+                    </div>
+
+                    <!-- Stories -->
+                    <div class="w-28 h-55 bg-white rounded-lg shadow-md">
+                        <img src="https://via.placeholder.com/150" alt="Story"
+                            class="w-full h-24 rounded-t-lg object-cover" />
+                        <div class="flex flex-col items-center p-2">
+                            <div class="w-8 h-8 border-2 border-blue-500 rounded-full bg-white"></div>
+                            <span class="mt-2 text-sm text-gray-600">Cao Siro</span>
+                        </div>
+                    </div>
+
+                    <div class="w-28 h-55 bg-white rounded-lg shadow-md">
+                        <img src="https://via.placeholder.com/150" alt="Story"
+                            class="w-full h-24 rounded-t-lg object-cover" />
+                        <div class="flex flex-col items-center p-2">
+                            <div class="w-8 h-8 border-2 border-blue-500 rounded-full bg-white"></div>
+                            <span class="mt-2 text-sm text-gray-600">Nguyễn Quang Vinh</span>
+                        </div>
+                    </div>
+
+                    <div class="w-28 h-55 bg-white rounded-lg shadow-md">
+                        <img src="https://via.placeholder.com/150" alt="Story"
+                            class="w-full h-24 rounded-t-lg object-cover" />
+                        <div class="flex flex-col items-center p-2">
+                            <div class="w-8 h-8 border-2 border-blue-500 rounded-full bg-white"></div>
+                            <span class="mt-2 text-sm text-gray-600">Đinh Quang Trường</span>
+                        </div>
+                    </div>
+
+                    <div class="w-28 h-55 bg-white rounded-lg shadow-md">
+                        <img src="https://via.placeholder.com/150" alt="Story"
+                            class="w-full h-24 rounded-t-lg object-cover" />
+                        <div class="flex flex-col items-center p-2">
+                            <div class="w-8 h-8 border-2 border-blue-500 rounded-full bg-white"></div>
+                            <span class="mt-2 text-sm text-gray-600">Đinh Quang Trường</span>
+                        </div>
+                    </div>
+
+                    <div class="w-28 h-55 bg-white rounded-lg shadow-md">
+                        <img src="https://via.placeholder.com/150" alt="Story"
+                            class="w-full h-24 rounded-t-lg object-cover" />
+                        <div class="flex flex-col items-center p-2">
+                            <div class="w-8 h-8 border-2 border-blue-500 rounded-full bg-white"></div>
+                            <span class="mt-2 text-sm text-gray-600">Đinh Quang Trường</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- End Content -->
+
+
+        <!-- Sidebar-right -->
+        <div class="h-32 rounded-lg bg-gray-200">
+            <div class="flex h-screen flex-col justify-between border-e bg-white">
+                <div class="px-4 py-6">
+                    <span class="grid h-10 w-32 place-content-center rounded-lg bg-gray-100 text-xs text-gray-600">
+                        Logo
+                    </span>
+
+                    <ul class="mt-6 space-y-1">
+                        <li>
+                            <a href="#"
+                                class="block rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700">
+                                General
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a href="#"
+                                class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                                Billing
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#"
+                                class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                                Invoices
+                            </a>
+                        </li>
+
+                        <li>
+                            <details class="group [&_summary::-webkit-details-marker]:hidden">
+                                <summary
+                                    class="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                                    <span class="text-sm font-medium"> Account </span>
+
+                                    <span class="shrink-0 transition duration-300 group-open:-rotate-180">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="size-5" viewBox="0 0 20 20"
+                                            fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </span>
+                                </summary>
+
+                                <ul class="mt-2 space-y-1 px-4">
+                                    <li>
+                                        <a href="#"
+                                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                                            Details
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#"
+                                            class="block rounded-lg px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                                            Security
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <form action="#">
+                                            <button type="submit"
+                                                class="w-full rounded-lg px-4 py-2 text-sm font-medium text-gray-500 [text-align:_inherit] hover:bg-gray-100 hover:text-gray-700">
+                                                Logout
+                                            </button>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </details>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Sidebar-right -->
+
+    </div>
+
+    <!-- END MIDDILE -->
+
+
+
+
+
+</body>
+
+</html>
